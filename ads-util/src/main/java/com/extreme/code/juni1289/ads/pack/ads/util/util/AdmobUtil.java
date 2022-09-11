@@ -64,6 +64,9 @@ public class AdmobUtil {
     }
 
     public String getNativePublishAdId() {
+        if (getInstance().isShowTestAds()) {
+            return NATIVE_TEST_UNIT_ID;
+        }
         return nativePublishAdId;
     }
 
@@ -72,6 +75,9 @@ public class AdmobUtil {
     }
 
     public String getBannerPublishAdId() {
+        if (getInstance().isShowTestAds()) {
+            return BANNER_TEST_UNIT_ID;
+        }
         return bannerPublishAdId;
     }
 
@@ -80,6 +86,9 @@ public class AdmobUtil {
     }
 
     public String getInterstitialPublishAdId() {
+        if (getInstance().isShowTestAds()) {
+            return INTERSTIAL_TEST_UNIT_ID;
+        }
         return interstitialPublishAdId;
     }
 
@@ -88,6 +97,9 @@ public class AdmobUtil {
     }
 
     public String getRewardedPublishAdId() {
+        if (getInstance().isShowTestAds()) {
+            return REWARDED_TEST_UNIT_ID;
+        }
         return rewardedPublishAdId;
     }
 
