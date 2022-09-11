@@ -45,6 +45,13 @@ public class AdmobUtil {
             RequestConfiguration configuration = new RequestConfiguration.Builder()/*.setTestDeviceIds(Collections.singletonList(AdRequest.DEVICE_ID_EMULATOR))*/.build();
             MobileAds.setRequestConfiguration(configuration);
         });
+
+        AdmobUtil.getInstance().setBannerPublishAdId(bannerPublishAdId);
+        AdmobUtil.getInstance().setNativePublishAdId(nativePublishAdId);
+        AdmobUtil.getInstance().setRewardedPublishAdId(rewardedPublishAdId);
+        AdmobUtil.getInstance().setInterstitialPublishAdId(interstitialPublishAdId);
+        AdmobUtil.getInstance().setShowNativeAds(isShowNativeAds);
+        AdmobUtil.getInstance().setShowTestAds(isShowTestAds);
     }
 
     public boolean isShowNativeAds() {

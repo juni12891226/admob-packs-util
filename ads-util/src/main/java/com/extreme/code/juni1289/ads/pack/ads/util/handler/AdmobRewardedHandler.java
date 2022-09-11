@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.util.Log;
 
-import com.google.android.ads.interfaces.AdmobRewardedEvents;
-import com.google.android.ads.nativetemplates.R;
-import com.google.android.ads.util.AdmobUtil;
+import com.extreme.code.juni1289.ads.pack.ads.util.R;
+import com.extreme.code.juni1289.ads.pack.ads.util.interfaces.AdmobRewardedEvents;
+import com.extreme.code.juni1289.ads.pack.ads.util.util.AdmobUtil;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.OnUserEarnedRewardListener;
@@ -29,7 +29,7 @@ public class AdmobRewardedHandler {
         progressDialog.setCancelable(false);
         progressDialog.show();
         AdRequest adRequest = new AdRequest.Builder().build();
-        RewardedAd.load(activity, AdmobUtil.getRewardedAdsUnitId(),
+        RewardedAd.load(activity, AdmobUtil.getInstance().getRewardedPublishAdId(),
                 adRequest, new RewardedAdLoadCallback() {
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
